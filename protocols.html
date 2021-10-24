@@ -28,15 +28,6 @@
         <link rel="stylesheet" href="vendors/datatables.net/datatables.net-buttons-se/css/buttons.semanticui.min.css">
 
 
-
-
-
-
-
-        
-        
-
-
         <!-- for semantic ui icon - follow this link
              https://github.com/Semantic-Org/Semantic-UI-Docs/blob/master/server/partials/examples/icon.html-->
 
@@ -180,244 +171,170 @@
                                        
     
                                                     <div class="sixteen wide computer sixteen wide phone centered column">
-                                                        <div class="ui positive message">
+                                                        <!--<div class="ui positive message">
                                                             <i class="close icon"></i>
                                                             <div class="header">
                                                                 Great News!
                                                             </div>
                                                             <p>Elab now has ....</p>
-                                                        </div>
+                                                        </div>-->
                                                         <h4></h4>
                                                       
                                                       
                                                         <!-- BEGIN DATATABLE -->
                                                         <div class="ui stacked segment">
-                                                            <div class="ui green ribbon icon label">List Available Experiment</div>
+                                                            <div class="ui green ribbon icon label">List of Available Experiment</div>
                                                             <div class="ui divider"></div>
-                                                            <table id="example" class="ui celled padded table" style="width:90%">
+                                                            <table id="example" class="ui celled table"  cellspacing="0"  style="width:100%">
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Experiment Name</th>
+                                                                        <th>Protocol Name</th>
                                                                         <th>Location</th>
                                                                         <th>Scientific Area</th>
-                                                                        <th>Education Levels</th>
-                                                                        <th>
-                                                                            State
-                                                                        </th>
+                                                                        <th>Education Level</th>
+                                                                        <th>State</th>
+                                                                        <th>Queue</th>
+                                                                        <th>New execution</th>
+                                                                          
+                                                                      
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    <!--Monte Carlo Experiment-->
                                                                     <tr>
-                                                                        <td>Condensador Cilindro</td>
+                                                                        <td>Monte Carlo</td>
+                                                                        <td></td>
                                                                         <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
+                                                                        <td>Fisica Estatistica </td>
                                                                         <td>Advanced</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Velocidade do som</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
-                                                                        <td>Advanced</td>
+                                                                        <td></td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <a href="new_protocol.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
                                                                        
-                                                                    </tr>
+                                                                    </tr>   
+                                                                    
+                                                                    <!--Pendulum Experiment-->
+                                                                    
                                                                     <tr>
-                                                                        <td>Gamma</td>
+                                                                        <td>Pendulo Experiment</td>
+                                                                        <td>Pendulo gravítico </td>
                                                                         <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
-                                                                        <td>Advanced</td>
+                                                                        <td>Oscillation and Waves </td>
+                                                                        <td>Intermediate</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <div class="ui buttons">
+                                                                                <a href="executions.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Sonda de Langimuir</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
-                                                                        <td>Basico</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Estatistica de Dados</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica Estatistica</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Pendulo gravítico</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Pendulo vertical amortecido</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica basica</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Inclined Pane</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Mecanica</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Photovoltaic Panel</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Física Interdisciplinar</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Boyle Mariotte</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Thermodynamics</td>
-                                                                        <td>Basic</td>
-                                                                        <td>
-                                                                            <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
-                                                                        </td>
-                                                                        
-                                                                    </tr>
+                                                                    </tr>    
 
                                                                     <tr>
-                                                                        <td>Condução de Calor</td>
+                                                                        <td>Pendulum Experiment</td>
+                                                                        <td>Pendulo vertical amortecido</td>
                                                                         <td> Lisboa Tecnico </td>
-                                                                        <td>Thermodynamics</td>
-                                                                        <td>intermediate</td>
+                                                                        <td>Oscilation and Waves</td>
+                                                                        <td>Basic</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <div class="ui buttons">
+                                                                                <a href="executions.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
+                                                                       
+                                                                    </tr>    
+
                                                                     <tr>
-                                                                        <td>Radiaactividade</td>
+                                                                        <td>Velocidade de som</td>
+                                                                        <td></td>
                                                                         <td> Lisboa Tecnico </td>
-                                                                        <td>Fisica atomica</td>
-                                                                        <td>intermediate</td>
+                                                                        <td>Oscillation and waves</td>
+                                                                        <td>Advanced</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <div class="ui buttons">
+                                                                                <a href="executions.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
+                                                                       
+                                                                    </tr>    
+
                                                                     <tr>
-                                                                        <td>Experiencia de Planck</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Física básica</td>
-                                                                        <td>Intermediate</td>
+                                                                        <td>Faro-CCVAlg</td>
+                                                                        <td></td>
+                                                                        <td>Faro</td>
+                                                                        <td>Oscilation and Waves</td>
+                                                                        <td>World Pendulum</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            <div class="ui buttons">
+                                                                                <a href="executions.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
+                                                                       
+                                                                    </tr>   
+                                                                    
                                                                     <tr>
-                                                                        <td>Mola</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Mecanica</td>
-                                                                        <td>Intermediate</td>
+                                                                        <td>Lisboa-Planetério</td>
+                                                                        <td></td>
+                                                                        <td>Lisboa</td>
+                                                                        <td>Oscilation and Waves</td>
+                                                                        <td>World Pendulum</td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
+                                                                                <button class="ui active positive button">ON</button>
                                                                                 <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
-                                                                              </div>
+                                                                                <button class="ui disabled negative button">OFF</button>
+                                                                            </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Magnetic field</td>
-                                                                        <td> Lisboa Tecnico </td>
-                                                                        <td>Electromagnetism</td>
-                                                                        <td>Intermediate</td>
+                                                                        <td></td>
                                                                         <td>
                                                                             <div class="ui buttons">
-                                                                                <a href="pendulum.html"><button class="ui positive button">Go</button></a>
-                                                                                <div class="or" data-text="or"></div>
-                                                                                <a href="new_protocol.html"><button class="ui negative button">New</button></a>
+                                                                                <a href="executions.html"><button class="ui blue button"><i class="plus icon"></i> </button></a>
                                                                               </div>
                                                                         </td>
-                                                                        
-                                                                    </tr>
+                                                                       
+                                                                    </tr>   
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -452,48 +369,13 @@
     <script src="vendors/datatables.net/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="vendors/datatables.net/datatables.net-responsive-se/js/responsive.semanticui.min.js"></script>
     <script src="vendors/datatables.net/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-     <script src="vendors/datatables.net/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="vendors/datatables.net/datatables.net-buttons/js/buttons.colVis.min.js"></script>
     <script src="vendors/datatables.net/datatables.net-buttons/js/buttons.html5.min.js"></script>
-   <script src="vendors/datatables.net/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net/datatables.net-buttons/js/buttons.print.min.js"></script>
     <script src="vendors/datatables.net/datatables.net-buttons-se/js/buttons.semanticui.min.js"></script>
     
-     <script src="vendors/jszip/jszip.min.js"></script>
-     <script src="vendors/pdfmake/pdfmake.min.js"></script>
-      <script src="vendors/pdfmake/vfs_fonts.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/pdfmake/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/vfs_fonts.js"></script>
 
-      <script>
-       /* $(document).ready(function(){
-            // - MESSAGES
-            $('.message .close').on('click', function() {
-                $(this)
-                  .closest('.message')
-                  .transition('fade')
-                ;
-            });
-            // - DATATABLES
-            $(document).ready(function(){
-                $('#example').DataTable();
-            });
-        
-            var table = $('#example').DataTable({
-                 searchPanes: true
-            });
-
-            table.searchPanes.container().prependTo(table.table().container());
-            table.searchPanes.resizePanes()
-
-    
-        });*/
-
-        $(document).ready(function() {
-    var table = $('#example').DataTable({
-        searchPanes: true
-       
-
-    });
-    table.searchPanes.container().prependTo(table.table().container());
-    table.searchPanes.resizePanes();
-});
-
-    </script>
-     </html>
+</html>

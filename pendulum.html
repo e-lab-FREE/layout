@@ -165,63 +165,42 @@
                         <h2>Welcome...</h2>
                         <div class="ui top attached tabular menu">
                             <a class="active item" data-tab="description">Description</a>
-                            <a class="item" data-tab="new">New</a>
+                            <a class="item" data-tab="configuration">Configuration</a>
+                            <a class="item" data-tab="execution">Execution</a>
+                            <a class="item" data-tab="results">Results</a>
                         </div>
                         <div class="ui bottom attached 
                         active tab segment" data-tab="description">
                         <!--descrição geral da experiencia-->
-                        <section class="intro">
-                            <figure class="">
-                              <img
-                                src="images/pendulo.png"
-                                alt="pendulo"
-                                width="60%">
-                            </figure>
-                            <h2 id="about-the-Monte-Carlo">Experiencia de Pendulo </h2>
-                             <p>
-                             Com este aplicação <strong>FLASK</strong>, pode se realizar a experiência de pendulo gravitico. Para efeito
-                             deve-se seguir os seguintes passos:
-                            <ul>
-                            <li>
-                                Prencher os inputs (l - comprimento inicial e N - número de amostras a recolher) na tab <strong>controller</strong>
-                            </li>
-                            <li>
-                                Submeter o pedido clicando no botão "play" e ver começar a receber os dados em tempo real na tab <strong>Results</strong>
-                            </li>
-                            </ul>
-                            <h2> Detalhes do Pendulo - isto vai tabela</h2>
-                            <!--tabela com informações do pendulo-->
-                            
-                            </p>
+                                <section class="intro">
+                                    <figure class="">
+                                    <img
+                                        src="images/pendulo.png"
+                                        alt="pendulo"
+                                        width="60%">
+                                    </figure>
+                                    <h2 id="about-the-Monte-Carlo">Experiencia de Pendulo </h2>
+                                    <p>
+                                    Com este aplicação <strong>FLASK</strong>, pode se realizar a experiência de pendulo gravitico. Para efeito
+                                    deve-se seguir os seguintes passos:
+                                    <ul>
+                                    <li>
+                                        Prencher os inputs (l - comprimento inicial e N - número de amostras a recolher) na tab <strong>controller</strong>
+                                    </li>
+                                    <li>
+                                        Submeter o pedido clicando no botão "play" e ver começar a receber os dados em tempo real na tab <strong>Results</strong>
+                                    </li>
+                                    </ul>
+                                    <h2> Detalhes do Pendulo - isto vai tabela</h2>
+                                    <!--tabela com informações do pendulo-->
+                                    
+                                    </p>
 
-                        </section>
+                                </section>
                         <!--end of the description-->
                         </div>
                         <div class="ui bottom attached 
-                           tab segment" data-tab="new">
-                           <!--form for the experiment-->
-                           <!--
-                           <h2>Initial Displacement</h2>
-                           <div class="ui segment">
-                               <div class="ui range" id="range1"></div>
-                                <br>
-                                <div class="ui input">
-                                    <input type="text" id="input1">
-                                </div>
-                            </div>
-
-                            <h2>Number of Samples N</h2>
-                            <div class="ui segment">
-                                <div class="ui labeled range" id="range2"></div>
-                                 <br>
-                                 <div class="ui input">
-                                     <input type="text" id="input2">
-                                 </div>
-                             </div>-->
-
-
-
-
+                           tab segment" data-tab="configuration">
                              <div class="ui two column stackable center aligned grid ">
                                 <div class="column">
                                     <h2>Initial Displacement</h2>
@@ -242,27 +221,64 @@
                                                  <input type="text" id="Samples">
                                              </div>
                                          </div>
-                                    
                                 </div>
-                                
-                                
-                                <div class="ui vertical divider"></div>
-                                <div class="column">
-                                    <h2>Video stream </h2>
-                                    <div class="url video">
-                                        <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
-                                        </div>
-                                    </div>
-                                         
+                                <br>
+                                <div class="ui hidden divider"></div>
+                                <a href="executions.html"> <div class="ui blue button">Submit</div></a>
+                                <div class="ui red button">Clear All</div>
+
                                 </div>
-                              </div>
-                              <br>
-                              <div class="ui hidden divider"></div>
-                              <a href="executions.html"> <div class="ui blue button">Submit</div></a>
-                              <div class="ui red button">Clear All</div>
+                               
 
                         </div>
+                       
+                                    
+                               
+                                
+                                
+                                  
+                                
+                             
+
+                    
                            <!--end of the form-->
+                        
+                           <!--execution start-->
+
+                           <div class="ui bottom attached 
+                           tab segment" data-tab="execution">
+
+                           <div class="ui two column stackable center aligned grid ">
+                            <div class="column">
+                                    <h2>Gráfico</h2>
+                                    
+                                
+                            </div>
+                            
+                            
+                            <div class="ui vertical divider"></div>
+                            <div class="column">
+                                <h2>Video stream </h2>
+                                <div class="url video">
+                                    <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
+                                    </div>
+                                </div>
+                                     
+                            </div>
+                          </div>
+
+
+
+
+                           </div>
+
+                           <!--results start-->
+
+                           <div class="ui bottom attached 
+                           tab segment" data-tab="results">
+
+
+                           </div>
         
                           
                           
