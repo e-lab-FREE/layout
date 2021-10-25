@@ -40,11 +40,11 @@ $(document).ready(function(){
 	});
 	// - DATATABLES
 	$(document).ready(function(){
-		$('#list_of_experiment_id').DataTable();
+		$('#example').DataTable();
 	});
-	var table = $('#list_of_experiment_id').DataTable({
+	var table = $('#example').DataTable({
 		lengthChange: false,
-		buttons: [ 'colvis', 'excel', 'pdf' ]
+		buttons: [ 'colvis']
 	});
 	table.buttons().container().appendTo(
 		$('div.eight.column:eq(0)', table.table().container())
@@ -52,18 +52,6 @@ $(document).ready(function(){
 });
 
 
-$(".openbtn").on("click", function() {
-		$(".asd").toggleClass("marginlefting")
- 
-  })
-
-
-  $(document).ready(function() {
-    var table = $('#list_of_experiment_id').DataTable({
-        searchPanes: true
-    });
-    table.searchPanes.container().prependTo(table.table().container());
-    table.searchPanes.resizePanes();
-});
   
+ 
  
