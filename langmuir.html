@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no"/>
+        <meta name="description" content="Template for ELAB app"/>
+        <meta name="keywords" content="ELab layout, template, web site" />
+        <meta name="author" content="José Veiga" />
+        <meta name="theme-color" content="#ffffff" />
+        <!--HTML title-->
+        <title>elab layout </title>
+        <!--Block styling-->
+
+        <link rel="stylesheet" href="vendors/fomantic-ui/semantic.min.css">
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/style.css">
+        <script async="true" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"> </script>
+        <!-- Put your external css file here-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+    
+        <!-- To automatically render math in text elements, include the auto-render extension: -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);"></script>
+
+        <!--Dropdown-->
+        <link rel="stylesheet" href="vendors/fomantic-ui/semantic.min.css">
+        <link rel="stylesheet" href="vendors/fomantic-ui/components/accordion.css">
+        <link rel="stylesheet" href="vendors/fomantic-ui/components/accordion.min.css">
+        <!--datatable-->
+        <link rel="stylesheet" href="vendors/datatables.net/datatables.net-se/css/dataTables.semanticui.min.css">
+        <link rel="stylesheet" href="vendors/datatables.net/datatables.net-responsive-se/css/responsive.semanticui.min.css">
+        <link rel="stylesheet" href="vendors/datatables.net/datatables.net-buttons-se/css/buttons.semanticui.min.css">
+        <!--range slider-->
+        <link rel="stylesheet" href="vendors/fomantic-ui/components/range.css">
+        
+
+
+        <!-- for semantic ui icon - follow this link
+             https://github.com/Semantic-Org/Semantic-UI-Docs/blob/master/server/partials/examples/icon.html-->
+
+
+    </head>
+    <body>
+        <div class="ui grid">
+            <div class="ui row">
+                <div class="ui grid">
+                    <!--navbar-->
+                    <div class="computer only row">
+                        <div class=" column">
+                            <div class="ui top fixed massive menu navbar">
+                                <!--<div class="nav item">
+                                    <img src="images/eu.jpg">
+                                </div>-->
+                                <div class="left menu">
+                                    <div class="nav item">
+                                        <strong class="navtext">Elab</strong>
+                                    </div>
+                                
+                                </div>
+                                <div class="ui top pointing dropdown admindropdown link item right">
+                                    <img class="imgrad" src="images/eu.jpg" alt="">
+                                    <span class="clear navtext"><strong>Hi, José</strong></span>
+                                    <i class="dropdown icon navtext"></i>
+                                    <div class="menu">
+                                        <div class="item"><p><i class="settings icon"></i>Account Setting</p></div>
+                                        <a href="login.html" class="item"><i class="sign out alternate icon"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--for mobile or table minimize your screen-->
+                    <div class="tablet mobile only row">
+                        <div class="column">
+                        <div class="ui top fixed menu navcolor">
+                            <a id="showmobiletabletsidebar" class="item navtext"><i class="content icon"></i></a>
+                            <div class="right menu">
+                                <div class="item">
+                                    <strong class="navtext">Elab</strong>
+                                   
+                                </div>
+                                <div class="item">
+                                    <img src="http://e-lab.ist.eu/rec.web/javax.faces.resource/elab_logo.png.faces?ln=images">
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!--sidebar-->
+                    <div class="tablet mobile only row">
+                        <div id="mobiletabletsidebar" class="mobiletabletsidebar animate hidden">
+                            <div class="ui left fixed vertical menu scrollable">
+                                <div class="item">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <img class="ui mini image" src="images/eu.jpg">
+                                            </td>
+                                            <td>
+                                                <span class="clear"><strong>Elab</strong></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <a class="item" href="index.html"><i class="home icon"></i> Home</a>
+                                <a class="item" href="protocols.html"><i class="table icon"></i> Protocols</a>
+                                <a class="item" href="executions.html"><i class="home icon"></i> Executions</a>
+                                <!-- Begin Simple Accordion -->
+                                <div class="ui accordion simpleaccordion item">
+                                    <div class="title titleaccordion item"><i class="dropdown icon"></i> Results</div>
+                                    <div class="content contentaccordion">
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> coisa1</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> coisa2</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> coisa3</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> coisa4</a>
+                                    </div>
+                                </div>
+                                <!-- End Simple Accordion -->
+                                <!--<a class="item"><i class="settings icon"></i> Settings</a>	
+                                <a href="login.html" class="item"><i class="sign out alternate icon"></i> Logout</a>
+                                <a class="item" href="https://fomantic-ui.com/"><i class="heart icon"></i>More Components</a>
+                                <div class="item" id="hidemobiletabletsidebar">
+                                    <button class="fluid ui button">
+                                        Close
+                                    </button>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--compuer-->
+                    <div class="computer only row">
+                        <div class="left floated three wide computer column" id="computersidebar">
+                            <div class="ui vertical fluid menu scrollable" id="simplefluid">
+                                <div class="clearsidebar"></div>
+                                <div class="ui top aligned  image">
+                                    <h2  class=" item"><img src="http://e-lab.ist.eu/rec.web/javax.faces.resource/elab_logo.png.faces?ln=images" id="logo-elab" ></h2> 
+                                </div>
+                                <a class="item" href="index.html"><i class="home icon"></i> Home</a>
+                                <a class="item" href="protocols.html"><i class="table icon"></i> Protocols</a>
+                                <a class="item" href="executions.html"><i class="home icon"></i> Executions</a>
+                                <!-- Begin Simple Accordion -->
+                                <div class="ui accordion simpleaccordion item">
+                                    <div class="title titleaccordion item"><i class="dropdown icon"></i> Results</div>
+                                    <div class="content contentaccordion">
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> link1</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> link2</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> link3</a>
+                                        <a class="item itemaccordion" href="#"><i class="settings icon"></i> link4</a>
+                                    </div>
+                                </div>
+                                <!-- End Simple Accordion -->
+                                <!--<a href="login.html" class="item"><i class="sign out alternate icon"></i> Logout</a>
+                                <a class="item" href="https://fomantic-ui.com/"><i class="heart icon"></i>More Components</a>
+                                <a class="item"></a>-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--content-->
+            <div class="right floated thirteen wide computer sixteen wide phone column" id="content">
+                <div class="ui container grid">
+                    <div class="row">
+                        <!--div com menus de descrição e new protcol-->
+                        <h2>Welcome...</h2>
+                        <div class="ui top attached tabular menu">
+                            <a class="active item" data-tab="description">Description</a>
+                            <a class="item" data-tab="configuration">Configuration</a>
+                            <a class="item " data-tab="execution">Execution</a>
+                            <a class="item " data-tab="results">Results</a>
+                        </div>
+
+                        <div class="ui bottom attached active tab segment" data-tab="description">
+                                 <!--descrição geral da experiencia-->
+                                <section class="intro">
+                                    <figure class="">
+                                    <img
+                                        src="images/pendulo.png"
+                                        alt="pendulo"
+                                        height="200px"
+                                        width="70%">
+                                    </figure>
+                                    <h2 id="about-the-pendulum-experiment">Experiencia de Sonda de Langmuir </h2>
+                                    <p>
+                                     Os plasmas tem caracteristicas diferentes relativamente aos outros estados da matéria. Para
+                                     poder medir estas tais caracteristicas métodos de diagonóstico foram desenvolvidos. Esta experiencia permite a 
+                                     determinação de algumas destas caracteristicas usando uma sonda eléctrica, normalmente usada de <strong>sonda de langmuir</strong>.
+                                     <br> <br>
+                                     
+                                     Este é um dos métodos de diagonóstico mais simples para plasmas. Onde essencialmente consiste na colocação de um filamento num
+                                     material conductivo no interior de um plasma, variando a polarização eléctrica da sonda os electrões do plasma vão ser repelidos
+                                     ou atraídos. A característica electrica da sonda, isto é, a relação entre a tensão de ppolarização e a corrente percorendo a sonda 
+                                     permite a extrapolação da temperatura dos electrões e da intensidade do plasma. A caracteristica eléctrica é dada por:
+                                     
+                                     <div class="cmath">
+                                        `i = -i_{sat}^+ \left[1 - e^{(\frac{e}{K_BT_e}(V_s - V_f)))\right]`
+                                     </div>
+                                     onde
+                                     <ul>
+                                         <li>
+                                            <div class="cmath">
+                                                <strong>`i`</strong> tensão na sonda 
+                                             </div>
+                                         </li>
+                                         <li>
+                                             <div class="cmath">
+                                                `V_s` tensão de polarização dada por  `i_{sat}^+ \approx j_{sat}^+A_s \approx \frac{1}{2}enc_sA_s`
+                                             </div>
+                                         </li>
+                                         <li>
+                                            <div class="cmath">
+                                               `sat^+` é a corrente de ionização iónica 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `T_e` é a temperatura dos electrões
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `V_f` é o potencial flutuante do plasma
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `A_s` é a area de contacto de sonda cilindrica (altura=10mm e diametro=0.2mm)
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `V_s` tensão de polarização dada por  `i_{sat}^+ \approx j_{sat}^+A_s \approx \frac{1}{2}enc_sA_s`
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `e` é a carga do electrão equivalente a   `1.6 \times 10^{-19}C`
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `n` é a densidade do plasma
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="cmath">
+                                               `c_s` velocidade dos ions dado por  `c_s = \sqrt{\frac{K_BT_e}{M}}`
+                                            </div>
+                                        </li>
+                                     </ul>
+                       
+                                     
+                                     <br><br>
+                                     
+                                    
+                                    </p>
+
+                                </section>
+                               
+                        <!--end of the description-->
+                        </div>
+
+                        <!-- Begin of the configuration tab-->
+                        <div class="ui bottom attached tab segment" data-tab="configuration">
+                            <!--<p class="ui dividing header"><em>Pendulum configuration data</em></p>-->
+                            <div class="ui segment">
+                                <div class="ui two column very relaxed aligned grid">
+                                  <div class="column">
+                                    <legend> Tensão desejada do sinal</legend>
+                                                                
+                                    <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range3"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="Vsignal">
+                                         </div>
+                                     </div>
+                                  </div>
+                                  <div class="column">
+                                    <legend>Periodo do sinal de varrimento (ms)</legend>
+                                    <div class="ui segment">
+                                       <div class="ui blue labeled range" id="range4"></div>
+                                        <br>
+                                        <div class="ui input">
+                                            <input type="number" id="Pvariment">
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ui vertical divider">
+                                
+                                </div>
+
+
+                                <!--seconnd-->
+                                <div class="ui two column very relaxed aligned grid">
+                                    <div class="column">
+                                      <legend> Número de amostras por periodo</legend>
+                                                                  
+                                      <div class="ui segment">
+                                          <div class="ui blue labeled range" id="range5"></div>
+                                           <br>
+                                           <div class="ui input">
+                                               <input type="number" id="Vsignal">
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="column">
+                                      <legend>Número de periodos</legend>
+                                      <div class="ui segment">
+                                         <div class="ui blue labeled range" id="range6"></div>
+                                          <br>
+                                          <div class="ui input">
+                                              <input type="number" id="Nperiod">
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="ui vertical divider">
+                                  
+                                  </div>
+                                  <!--terceiro-->
+                                  <div class="ui two column very relaxed aligned grid">
+                                    <div class="column">
+                                      <legend> Pressão go Gás(mBar)</legend>
+                                                                  
+                                      <div class="ui segment">
+                                          <div class="ui blue labeled range" id="range7"></div>
+                                           <br>
+                                           <div class="ui input">
+                                               <input type="number" id="Pgas">
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="column">
+                                      <legend>Gás na camara</legend>
+                                      <div class="ui segment">
+                                        <div class="ui blue form">
+                                            <div class="inline fields">
+                                              
+                                              <div class="field">
+                                                <div class="ui blue radio checkbox">
+                                                  <input type="radio" name="frequency" checked="checked">
+                                                  <label>Helio</label>
+                                                </div>
+                                              </div>
+                                              <div class="field">
+                                                <div class="ui radio checkbox">
+                                                  <input type="radio" name="frequency">
+                                                  <label>Neon</label>
+                                                </div>
+                                              </div>
+                                              <div class="field">
+                                                <div class="ui radio checkbox">
+                                                  <input type="radio" name="frequency">
+                                                  <label>Argon</label>
+                                                </div>
+                                              </div>
+                                              
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="ui vertical divider">
+                                  
+                                  </div>
+
+                                  <div class="ui two column very relaxed aligned grid">
+                                    <div class="column">
+                                      <legend> Pressão de bombagem</legend>
+                                                                  
+                                      <div class="ui segment">
+                                          <div class="ui blue labeled range" id="range8"></div>
+                                           <br>
+                                           <div class="ui input">
+                                               <input type="number" id="Pbomba">
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="column">
+                                        <legend></legend>
+                                      
+                                      <div class="ui segment">
+                                        <div class="ui hidden divider"></div>
+                                     <a href="executions.html"> <div class="ui submit button">Submit</div></a>
+                                     <div class="ui red button">Cancel</div>
+                                     <div class="ui green button">Default Setting</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="ui vertical divider">
+                                  
+                                  </div>
+
+
+
+                                  </div>
+                             
+
+                              
+                              
+                            <!--<div class="ui two column very relaxed stackable grid ">
+                                <div class="column">
+                                    <legend> Tensão desejada do sinal</legend>
+                                    
+                                    <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range1"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="DeltaX">
+                                         </div>
+                                     </div>
+                                     <legend>Periodo do sinal de varrimento (ms)</legend>
+                                     <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range2"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="Samples">
+                                         </div>
+                                     </div>
+                                     <legend>Número de amostras por Periodo</legend>
+                                     <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range2"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="Samples">
+                                         </div>
+                                     </div>
+                                     <legend>Número de periodos</legend>
+                                     <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range2"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="Samples">
+                                         </div>
+                                     </div>
+                                     <legend>Pressão go gás (mBar)</legend>
+                                     <div class="ui segment">
+                                        <div class="ui blue labeled range" id="range2"></div>
+                                         <br>
+                                         <div class="ui input">
+                                             <input type="number" id="Samples">
+                                         </div>
+                                     </div>
+                                     <div class="ui hidden divider"></div>
+                                     <a href="executions.html"> <div class="ui submit button">Submit</div></a>
+                                     <div class="ui red button">Cancel</div>
+                                     <div class="ui green button">Default Setting</div>
+                                </div>
+                            </div>-->
+                              
+                        </div>
+                        <!-- End of the configuration tab-->
+
+                        <!-- Begin of the execution tab-->
+                        <div class="ui bottom attached tab segment" data-tab="execution" id="cena">
+                            <div class="ui two column stackable center aligned grid ">
+                                <div class="column">
+                                    <h2>Gráfico</h2>
+                                </div>
+                                <div class="ui vertical divider"></div>
+                                <div class="column">
+                                    <h2>Video stream </h2>
+                                    <div class="url video">
+                                        <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                      <!-- End of the execution tab-->
+
+                      <!-- Begin of the results tab-->
+                      <div class="ui bottom attached tab segment" data-tab="results" id="cena1">
+                              Resultados da experiencia
+                      </div>
+                      <!-- End of the results tab-->
+
+
+
+
+
+
+                        
+                          
+                          
+                        
+
+
+
+                       
+                    
+                     </div>
+                </div>
+            </div>
+    </body>
+
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/fomantic-ui/semantic.min.js"></script>
+    <script src="vendors/fomantic-ui/components/accordion.js"></script>
+    <script src="vendors/fomantic-ui/components/accordion.min.js"></script>
+    <script src="vendors/fomantic-ui/components/range.js"></script>
+    <script src="js/elab-layout.js"></script>
+    <script src="js/form_langmuir.js"></script>
+    <script src="js/plotly_results.js"></script>
+</html>
