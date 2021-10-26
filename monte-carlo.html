@@ -177,52 +177,77 @@
                                     <img
                                         src="images/pendulo.png"
                                         alt="pendulo"
-                                        width="60%">
+                                        height="200px"
+                                        width="70%">
                                     </figure>
-                                    <h2 id="about-the-Monte-Carlo">Experiencia de Pendulo </h2>
+                                    <h2 id="about-the-pendulum-experiment">Experiencia de Monte Carlo  </h2>
                                     <p>
-                                    Com este aplicação <strong>FLASK</strong>, pode se realizar a experiência de pendulo gravitico. Para efeito
-                                    deve-se seguir os seguintes passos:
-                                    <ul>
-                                    <li>
-                                        Prencher os inputs (l - comprimento inicial e N - número de amostras a recolher) na tab <strong>controller</strong>
-                                    </li>
-                                    <li>
-                                        Submeter o pedido clicando no botão "play" e ver começar a receber os dados em tempo real na tab <strong>Results</strong>
-                                    </li>
-                                    </ul>
-                                    <h2> Detalhes do Pendulo - isto vai tabela</h2>
-                                    <!--tabela com informações do pendulo-->
-                                    
+                                     Esta Experiencia permite o estudo da aceleração da gravidade em diferentes pontos do globo. Para
+                                     este efeito pode ser usada uma constalação de vários pêndulos colocados em diferentes latitudes e 
+                                     operados remotamente pela internet. <br> <br>
+                                     
+                                     No entanto outros protocols experimentais podem ser realizados, não só na gravidade local para ajustar 
+                                     um modelo geofisico adequado mas também para estudar princípios mecânicos simples tais como a conservação
+                                     da energia mecânica.  <br><br>
+                                     
+                                     Latitudes de 50º a 0º no equador são acessiveis.
                                     </p>
 
                                 </section>
+                                <h3> Detalhes do pêndulo</h3>
+                                <p>Comprimento de cabo (sem contar com a esfera):<a href="https://groups.ist.utl.pt/wwwelab/wiki/index.php?title=P%C3%AAndulo_Mundial#Aparato_experimental"><em>Verifique aqui para cada lugar</em></a></p>
+
+                                <table id="example" class="ui celled padded table"  cellspacing="0"  style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Massa da esfera</th>
+                                            <th>Diametro da esfera</th>
+                                            <th>Percurso da esfera atrtavés do laser</th>
+                                            <th>Constante de elasticidade</th>
+                                            <th>Coeficiente de expansão termica</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <td>2kG +/- 75G</td>
+                                        <td>81mm +/- 0.5mm</td>
+                                        <td>~81mm</td>
+                                        <td>200GPa</td>
+                                        <td>14E-6 K^-1</td>
+                                    </tbody>
+
+
+
+                                </table>
+
                         <!--end of the description-->
                         </div>
 
                         <!-- Begin of the configuration tab-->
                         <div class="ui bottom attached tab segment" data-tab="configuration">
-                            <div class="ui two column stackable center aligned grid ">
+                            <!--<p class="ui dividing header"><em>Pendulum configuration data</em></p>-->
+                            <div class="ui two column stackable aligned grid ">
+                               
                                 <div class="column">
-                                    <h2>Initial Displacement</h2>
+                                    <legend> Radius of the circle(ua)</legend>
                                     <div class="ui segment">
-                                        <div class="ui range" id="range1"></div>
+                                        <div class="ui blue labeled range" id="range1"></div>
                                          <br>
                                          <div class="ui input">
-                                             <input type="text" id="DeltaX">
+                                             <input type="number" id="DeltaX">
                                          </div>
                                      </div>
-                                     <h2>Number of Samples N</h2>
+                                     <legend>Number of Iterations</legend>
                                      <div class="ui segment">
-                                        <div class="ui labeled range" id="range2"></div>
+                                        <div class="ui blue labeled range" id="range2"></div>
                                          <br>
                                          <div class="ui input">
-                                             <input type="text" id="Samples">
+                                             <input type="number" id="Samples">
                                          </div>
                                      </div>
                                      <div class="ui hidden divider"></div>
-                                     <a href="executions.html"> <div class="ui blue button">Submit</div></a>
-                                     <div class="ui red button">Clear All</div>
+                                     <a href="executions.html"> <div class="ui submit button">Submit</div></a>
+                                     <div class="ui red button">Cancel</div>
+                                     <div class="ui green button">Default Setting</div>
                                 </div>
                             </div>
                               
@@ -230,22 +255,37 @@
                         <!-- End of the configuration tab-->
 
                         <!-- Begin of the execution tab-->
-                        <div class="ui bottom attached tab segment" data-tab="execution" id="cena">
-                            <div class="ui two column stackable center aligned grid ">
+                        <div class="ui bottom attached tab segment" data-tab="execution">
+                        <div class="ui hidden divider"></div>
+                        <div class="ui grid">
+                            <div class="two column row">
                                 <div class="column">
-                                    <h2>Gráfico</h2>
+                                    <h2 class="ui medium header">Grafico1</h2>
+                                    <p></p>
                                 </div>
-                                <div class="ui vertical divider"></div>
                                 <div class="column">
-                                    <h2>Video stream </h2>
-                                    <div class="url video">
-                                        <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
-                                        </div>
-                                    </div>
+                                    <h2 class="ui medium header">video</h2>
+                                    <p></p>
                                 </div>
-
                             </div>
+
+                            <div class="two column row">
+                                <div class="column">
+                                    <h2 class="ui medium header">Grafico2</h2>
+                                    <p></p>
+                                </div>
+                                <div class="column">
+                                    <h2 class="ui medium header">Grafico3</h2>
+                                    <p></p>
+                                </div>
+                            </div>
+                        
                         </div>
+                        </div>
+
+           
+            
+       
                       <!-- End of the execution tab-->
 
                       <!-- Begin of the results tab-->
@@ -279,6 +319,6 @@
     <script src="vendors/fomantic-ui/components/accordion.min.js"></script>
     <script src="vendors/fomantic-ui/components/range.js"></script>
     <script src="js/elab-layout.js"></script>
-    <script src="js/tab_.js"></script>
-    <script src="js/plotly_results.js"></script>
+    <script src="js/form_pendulum.js"></script>
+   
 </html>

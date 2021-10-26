@@ -175,8 +175,8 @@
                         <div class="ui top attached tabular menu">
                             <a class="active item" data-tab="description">Description</a>
                             <a class="item" data-tab="configuration">Configuration</a>
-                            <a class="item " data-tab="execution">Execution</a>
-                            <a class="item " data-tab="results">Results</a>
+                            <a class="disabled item " data-tab="execution">Execution</a>
+                            <a class="disabled item " data-tab="results">Results</a>
                         </div>
 
                         <div class="ui bottom attached active tab segment" data-tab="description">
@@ -272,7 +272,7 @@
                         <!-- Begin of the configuration tab-->
                         <div class="ui bottom attached tab segment" data-tab="configuration">
                             <!--<p class="ui dividing header"><em>Pendulum configuration data</em></p>-->
-                            <div class="ui segment">
+                            
                                 <div class="ui two column very relaxed aligned grid">
                                   <div class="column">
                                     <legend> Tensão desejada do sinal</legend>
@@ -310,7 +310,7 @@
                                           <div class="ui blue labeled range" id="range5"></div>
                                            <br>
                                            <div class="ui input">
-                                               <input type="number" id="Vsignal">
+                                               <input type="number" id="Nsignal">
                                            </div>
                                        </div>
                                     </div>
@@ -394,7 +394,7 @@
                                         <div class="ui hidden divider"></div>
                                      <a href="executions.html"> <div class="ui submit button">Submit</div></a>
                                      <div class="ui red button">Cancel</div>
-                                     <div class="ui green button">Default Setting</div>
+                                     <div class="ui green button" onclick="default_config()">Default Setting</div>
                                       </div>
                                     </div>
                                   </div>
@@ -404,7 +404,7 @@
 
 
 
-                                  </div>
+                                  
                              
 
                               
