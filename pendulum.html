@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="vendors/datatables.net/datatables.net-buttons-se/css/buttons.semanticui.min.css">
         <!--range slider-->
         <link rel="stylesheet" href="vendors/fomantic-ui/components/range.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <!--
         <style>
@@ -272,31 +273,61 @@
 
                         <!-- Begin of the execution tab-->
                         <div class="ui bottom attached tab segment" data-tab="execution">
-                        <div class="ui hidden divider"></div>
-                        <div class="ui grid">
-                            <div class="two column row">
+                            <div class="ui two column very relaxed aligned grid">
                                 <div class="column">
+                                  
+                                  <div class="column">
                                     <h2 class="ui medium header">Charts</h2>
-                                    <select name="skills" multiple="" class="ui fluid dropdown">
-                                        <option value="">click here to see the results in real time</option>
-                                        <option value="grp1">grafico1</option>
-                                        <option value="grp1">grafico2</option>
-                                        <option value="grp1">grafico3</option>
-                                        
-                                      </select>
+                                    <div style="height: 350px; width: 500px;" id=myDiv></div>
+                                    <select id="plotselect" onchange="findplot()" >
+                                        <option value="trace1">plot1</option>
+                                        <option value="trace2">trace2</option>
+                                        <option value="trace3">trace3</option>
+                                        <option value="All">All</option>
+                                    </select>
+                                    
+                                </div>
+                                                              
                                 </div>
                                 <div class="column">
+                                  
                                     <div style="width: 300px"
                                      class="ui container">
                                        <h2 class="ui medium header">video</h2>
                                        <div class=" url video">
                                              <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
-                                        </div>
-                                        </div>
+                                             </div>
+                                        
                                         </div>
                                     </div>
-                                </div>
+                              </div>
                             </div>
+
+                            <!---->
+
+                            <div class="ui two column very relaxed aligned grid">
+                                <div class="column">
+                                  
+                                  <div class="column">
+                                    <h2 class="ui medium header">Charts</h2>
+                                    <div style="height: 350px; width: 500px;" id=myDiv1></div>
+                                    
+                                </div>
+                                                              
+                                </div>
+                                <div class="column">
+                                  
+                                    <h2 class="ui medium header">Charts</h2>
+                                    <div style="height: 350px; width: 500px;" id=myDiv2></div>
+                                    
+                                    
+                              </div>
+                            </div>
+                         
+                              
+                            
+                        
+                        
 
                             <br><br> <br><br><br>
 
@@ -429,38 +460,8 @@
                                     <td>cell</td>
                                     <td>cell</td>
                                 </tr>
-                                <tr>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                </tr>
-                                <tr>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                </tr>
-                                <tr>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                </tr>
-                                <tr>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                    <td>cell</td>
-                                </tr>
+                            
+                               
                                 
                               </tbody>
                               </table>
