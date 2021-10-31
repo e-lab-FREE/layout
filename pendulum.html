@@ -29,22 +29,8 @@
         <link rel="stylesheet" href="vendors/fomantic-ui/components/range.css">
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<!--
-        <style>
-             th, td, p, input, h3 {
-            font:15px 'Segoe UI';
-             }
-             table, th, td {
-            border: solid 1px #ddd;
-            border-collapse: collapse;
-            padding: 2px 3px;
-            text-align: center;
-            }
-            th {
-            font-weight:bold;
-            }
-        </style>
-    -->
+        
+
         
 
 
@@ -273,7 +259,7 @@
 
                         <!-- Begin of the execution tab-->
                         <div class="ui bottom attached tab segment" data-tab="execution">
-                            <div class="ui two column very relaxed aligned grid">
+                           <!-- <div class="ui two column very relaxed aligned grid">
                                 <div class="column">
                                   
                                   <div class="column">
@@ -303,7 +289,7 @@
                               </div>
                             </div>
 
-                            <!---->
+                        
 
                             <div class="ui two column very relaxed aligned grid">
                                 <div class="column">
@@ -323,13 +309,49 @@
                                     
                               </div>
                             </div>
+                        -->
+                            <div class="ui two column stackable center aligned grid segment">
+                                <div class="column">
+                                   <div style="height: 350px; width: 486px;" id="myDiv"></div>
+                                   <select id="plotselect" onchange="findplot()" >
+                                        <option value="trace1">plot1</option>
+                                        <option value="trace2">trace2</option>
+                                        <option value="trace3">trace3</option>
+                                        <option value="All">All</option>
+                                   </select>
+                                </div>
+                                <div class="ui vertical divider"></div>
+                                <div class="column">
+                                    <div style="width: 300px"
+                                    class="ui container">
+                                      <h2 class="ui medium header">video</h2>
+                                      <div class=" url video">
+                                            <div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="https://semantic-ui.com/images/bear-waving.jpg">
+                                            </div>
+                                       
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+
+                            <!---duas vezes-->
+
+                            <div class="ui two column stackable center aligned grid segment">
+                                <div class="column">
+                                <div style="height: 350px; width: 500px;" id="myDiv2"></div>
+                                </div>
+                                <div class="ui vertical divider"></div>
+                                <div class="column">
+                                <div style="height: 350px; width: 500px;" id="myDiv1"></div>
+                                </div>
+                            </div>
                          
                               
                             
                         
                         
 
-                            <br><br> <br><br><br>
+                          
 
 
                             <!--table-->
