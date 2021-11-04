@@ -425,3 +425,15 @@ function buildPlot3(res) {
      Plotly.newPlot('myplot2', output_data, layout);
    
     }
+
+
+function set_reset() {
+  var resetBtn = document.getElementById('resetBtn');
+  var location = window.location.href.split('?')[0];
+  
+    resetBtn.addEventListener('click', function(event) {
+    console.log('Reseting values of R or iteration...');
+    window.location.href = location;
+    });
+    }
+
